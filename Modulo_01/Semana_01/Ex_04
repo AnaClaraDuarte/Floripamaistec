@@ -1,0 +1,22 @@
+string[] Nomes = new string[5];
+decimal[] Notas = new decimal[5];
+
+for(int i = 0;i < 5; i++)
+{
+    Console.Write("Digite o nome do aluno: ");
+    Nomes[i] = Console.ReadLine();
+
+    Console.Write("Digite a media do aluno: ");
+    Notas[i] = decimal.Parse(Console.ReadLine());
+}
+for(int i = 0;i < 5; i++)
+{
+    if (Notas[i] >= 6)
+    {
+        Console.WriteLine($"O aluno {Nomes[i]} esta aprovado.");
+    }
+    else
+    {
+        Console.WriteLine($"O aluno {Nomes[i]} esta reprovado.");
+    }
+}
