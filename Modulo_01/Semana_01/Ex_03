@@ -1,0 +1,23 @@
+List<int> Pares = new List<int>();
+List<int> Impares = new List<int>();
+
+for(int i = 0;i < 10; i++)
+{
+    Console.Write("Digite um numero: ");
+    int num = int.Parse(Console.ReadLine());
+
+    if(num % 2 == 0)
+    {
+        Pares.Add(num);
+    }
+    else
+    {
+        Impares.Add(num);
+    }
+}
+  Pares.Sort();
+  Impares.Sort();
+
+
+  Console.WriteLine($"A lista de pares possui {Pares.Count()} numeros e a soma de todos eles e {Pares.Sum()}");
+  Console.WriteLine($"A lista de pares possui {Impares.Count()} numeros e a soma de todos eles e {Impares.Sum()}");
