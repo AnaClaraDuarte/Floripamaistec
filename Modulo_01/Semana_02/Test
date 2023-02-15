@@ -1,0 +1,17 @@
+using ExBanco;
+using System.Diagnostics;
+
+ContaBancaria conta = new ContaBancaria();
+conta.numero = 1234;
+conta.agencia = 10;
+conta.nomeTitular = "Charles";
+conta.saldo = 0;
+conta.tipoconta = ContaBancaria.TipoConta.POUPANCA;
+
+
+
+conta.Deposito(200);
+
+conta.Saque(100);
+
+conta.Saldo | ();
