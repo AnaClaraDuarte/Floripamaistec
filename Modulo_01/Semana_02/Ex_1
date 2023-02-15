@@ -1,1 +1,59 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ExBanco
+{
+    // Defina uma classe chamada ContaBancaria com os seguintes atributos:
+    // número, agência, nome do titular, saldo, tipo de conta.
+    public class ContaBancaria
+    {
+        public int numero;
+        public int agencia;
+        public string nomeTitular;
+        public decimal saldo = 0;
+        public TipoConta tipoconta;
+
+        public enum TipoConta
+        {
+            CORRENTE = 0,
+            POUPANCA = 1,
+        }
+
+        // Crie um método para depositar valores na conta bancária.
+        public void Deposito (decimal Valor)
+        {
+            if (Valor > 0)
+            {
+                saldo += Valor;
+            }
+            else
+            {
+                saldo += Valor; Console.WriteLine("Valor invalido!");
+            }
+        }
+
+        //Crie um método para possibilitar o saque de valores da conta bancária.
+        public void Saque (decimal Valor)
+        {
+            if(Valor <= 0)
+            {
+                Console.WriteLine("Digite um valor valido!");
+            }else if(Valor > saldo)
+            {
+                Console.WriteLine("Saldo insuficiente!");
+            }
+            else
+            {
+                saldo -= Valor;
+            }
+        }
+        public void Saldo()
+        {
+            Console.WriteLine($"O seu saldo atual e {saldo}");
+        } 
+    }
+}
 
